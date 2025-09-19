@@ -53,6 +53,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   background-color: #fbf6e9;
+  z-index: 0
 }
 .flex-item-left{
   flex: 100%;
@@ -255,6 +256,7 @@ p{
   }
 
 }
+
 
 
 
