@@ -22,6 +22,7 @@ button:hover {
 .topnav {
    background-color:#fac021;
    overflow: hidden;
+    z-index: 9999;
 }
 .topnav a{
     float: right;
@@ -254,6 +255,7 @@ p{
     opacity: 1;
   }
 }
+
 
 
 
