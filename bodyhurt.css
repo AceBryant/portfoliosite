@@ -77,16 +77,16 @@ img.hero{
   height: 724px;
   z-index:-1;
   position:absolute;
-  -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
-  animation: 1s ease-out 0.5s infinite slideInFromRight;
+  -webkit-animation: 1s ease-out infinite 0.5s infinite;
+  animation: 1s ease-out infinite 0.5s infinite;
 }
 img.hero1{
     width: 2203px;
   height: 724px;
   z-index: 0;
  position:absolute;
- -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
-  animation: 1s ease-out 0.5s infinite slideInFromRight;
+ -webkit-animation: 1s ease-out infinite 0.5s infinite;
+  animation: 1s ease-out infinite 0.5s infinite;
 }
 
 img.hero2{
@@ -94,8 +94,8 @@ img.hero2{
   height: 728px;
   z-index: 1;
   position:absolute;
-   -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
-  animation: 1s ease-out 0.5s infinite slideInFromRight;
+   -webkit-animation: 1s ease-out infinite 0.5s infinite;
+  animation: 1s ease-out infinite 0.5s infinite;
 }
 
 img.hero3{
@@ -103,8 +103,8 @@ img.hero3{
   height: 728px;
   z-index: 2;
   position:absolute;  
-  -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
-  animation: 1s ease-out 0.5s infinite slideInFromRight;
+  -webkit-animation: 1s ease-out infinite 0.5s infinite;
+  animation: 1s ease-out infinite 0.5s infinite;
 }
 
 img.hero4{
@@ -112,16 +112,16 @@ img.hero4{
   height: 728px;
   z-index: 3;
   position:absolute;
-   -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
-  animation: 1s ease-out 0.5s infinite slideInFromRight;
+   -webkit-animation: 1s ease-out infinite 0.5s infinite;
+  animation: 1s ease-out infinite 0.5s infinite;
 }
 img.hero5{
     width: 2269px;
   height: 728px;
   z-index: 4;
   position:absolute;
-   -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
-  animation: 1s ease-out 0.5s infinite slideInFromRight;
+   -webkit-animation: 1s ease-out infinite 0.5s infinite;
+  animation: 1s ease-out infinite 0.5s infinite;
 }
 
 img.hero6{
@@ -129,16 +129,16 @@ img.hero6{
   height: 728px;
   z-index: 5;
   position:absolute;
- -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
-  animation: 1s ease-out 0.5s infinite slideInFromRight;
+ -webkit-animation: 1s ease-out infinite 0.5s infinite;
+  animation: 1s ease-out infinite 0.5s infinite;
 }
 img.hero7{
     width: 2269px;
   height: 728px;
   z-index: 6;
   position: relative;
-   -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
-  animation: 1s ease-out 0.5s infinite slideInFromRight;
+   -webkit-animation: 1s ease-out infinite 0.5s infinite;
+  animation: 1s ease-out infinite 0.5s infinite;
 }
 body{
     background-color:purple;
@@ -233,11 +233,12 @@ p{
 }
 @keyframes slideInFromRight{
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
   }
 
 }
+
 
