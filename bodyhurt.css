@@ -83,36 +83,71 @@ img.hero {
 }
 
 img.hero1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* make sure they cover the container */
+  height: auto;  
   animation: slideInFromRight 1s ease-out 1s forwards;
   z-index: 2;
 }
 
 img.hero2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* make sure they cover the container */
+  height: auto;  
   animation: slideInFromRight 1s ease-out 1.5s forwards;
   z-index: 3;
 }
 
 img.hero3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* make sure they cover the container */
+  height: auto;  
   animation: slideInFromRight 1s ease-out 2s forwards;
   z-index: 4;
 }
 
 img.hero4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* make sure they cover the container */
+  height: auto;  
   animation: slideInFromRight 1s ease-out 2.5s forwards;
   z-index: 5;
 }
 
 img.hero5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* make sure they cover the container */
+  height: auto;  
   animation: slideInFromRight 1s ease-out 3s forwards;
   z-index: 6;
 }
 
 img.hero6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* make sure they cover the container */
+  height: auto;  
   animation: slideInFromRight 1s ease-out 3.5s forwards;
   z-index: 7;
 }
 
 img.hero7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* make sure they cover the container */
+  height: auto;  
   animation: slideInFromRight 1s ease-out 4s forwards;
   z-index: 8;
 }
@@ -220,6 +255,7 @@ p{
   }
 
 }
+
 
 
 
