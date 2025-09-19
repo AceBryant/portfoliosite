@@ -77,16 +77,16 @@ img.hero{
   height: 724px;
   z-index:-1;
   position:absolute;
-  -webkit-animation: 1s ease-out 0.5s infinite slideInFromLeft;
-  animation: 1s ease-out 0.5s infinite slideInFromLeft;
+  -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
+  animation: 1s ease-out 0.5s infinite slideInFromRight;
 }
 img.hero1{
     width: 2203px;
   height: 724px;
   z-index: 0;
  position:absolute;
- -webkit-animation: 1s ease-out 0.5s infinite slideInFromLeft;
-  animation: 1s ease-out 0.5s infinite slideInFromLeft;
+ -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
+  animation: 1s ease-out 0.5s infinite slideInFromRight;
 }
 
 img.hero2{
@@ -94,8 +94,8 @@ img.hero2{
   height: 728px;
   z-index: 1;
   position:absolute;
-   -webkit-animation: 1s ease-out 0.5s infinite slideInFromLeft;
-  animation: 1s ease-out 0.5s infinite slideInFromLeft;
+   -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
+  animation: 1s ease-out 0.5s infinite slideInFromRight;
 }
 
 img.hero3{
@@ -103,8 +103,8 @@ img.hero3{
   height: 728px;
   z-index: 2;
   position:absolute;  
-  -webkit-animation: 1s ease-out 0.5s infinite slideInFromLeft;
-  animation: 1s ease-out 0.5s infinite slideInFromLeft;
+  -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
+  animation: 1s ease-out 0.5s infinite slideInFromRight;
 }
 
 img.hero4{
@@ -112,8 +112,8 @@ img.hero4{
   height: 728px;
   z-index: 3;
   position:absolute;
-   -webkit-animation: 1s ease-out 0.5s infinite slideInFromLeft;
-  animation: 1s ease-out 0.5s infinite slideInFromLeft;
+   -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
+  animation: 1s ease-out 0.5s infinite slideInFromRight;
 }
 img.hero5{
     width: 2269px;
@@ -137,8 +137,8 @@ img.hero7{
   height: 728px;
   z-index: 6;
   position: relative;
-   -webkit-animation: 1s ease-out 0.5s infinite slideInFromLeft;
-  animation: 1s ease-out 0.5s infinite slideInFromLeft;
+   -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
+  animation: 1s ease-out 0.5s infinite slideInFromRight;
 }
 body{
     background-color:purple;
@@ -238,4 +238,5 @@ p{
   100% {
     transform: translateX(0);
   }
+
 }
