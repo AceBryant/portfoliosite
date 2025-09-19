@@ -120,8 +120,8 @@ img.hero5{
   height: 728px;
   z-index: 4;
   position:absolute;
-   -webkit-animation: 1s ease-out 0.5s infinite slideInFromLeft;
-  animation: 1s ease-out 0.5s infinite slideInFromLeft;
+   -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
+  animation: 1s ease-out 0.5s infinite slideInFromRight;
 }
 
 img.hero6{
@@ -129,8 +129,8 @@ img.hero6{
   height: 728px;
   z-index: 5;
   position:absolute;
- -webkit-animation: 1s ease-out 0.5s infinite slideInFromLeft;
-  animation: 1s ease-out 0.5s infinite slideInFromLeft;
+ -webkit-animation: 1s ease-out 0.5s infinite slideInFromRight;
+  animation: 1s ease-out 0.5s infinite slideInFromRight;
 }
 img.hero7{
     width: 2269px;
@@ -231,7 +231,7 @@ p{
     font-family: Poppins;
     font-size: 20px;
 }
-@keyframes slideinfromright{
+@keyframes slideInFromRight{
   0% {
     transform: translateX(-100%);
   }
@@ -240,3 +240,4 @@ p{
   }
 
 }
+
