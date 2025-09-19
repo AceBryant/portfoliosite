@@ -245,17 +245,18 @@ p{
     font-family: Poppins;
     font-size: 20px;
 }
-@keyframes slideInFromRight{
+@keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
-      opacity: 0;
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
-      opacity: 1;
+    opacity: 1;
   }
-
 }
+
+
 
 
 
