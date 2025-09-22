@@ -84,8 +84,6 @@ img.hero {
   width: 100%;
   height: auto; /* keep proportions */
   z-index: 1;
-    transform: translateX(100%);
-will-change: transform,opacity;
 }
 
 img.hero1 {
@@ -164,7 +162,6 @@ img.hero7 {
 transform: translateX(100%);
 will-change: transform,opacity;
 }
-body.loaded .hero  { animation: slideInFromRight 1s ease-out 0.5s forwards; }
 body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; }
 body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; }
 body.loaded .hero3 { animation: slideInFromRight 1s ease-out 2s forwards; }
@@ -274,6 +271,7 @@ p{
     opacity: 1;
   }
 }
+
 
 
 
