@@ -1,276 +1,136 @@
-/*bodyhurt.css*/
+/* Buttons */
 button {
-    background-color: #fac021; /* Yellow background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 4px 2px; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Get it to line up properly */
-    font-size: 16px; /* Increase font size */
-    margin: 0; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon on hover */
-    border-radius: 0px; /* Rounded corners */
-    width: 161.36px;
-    height: 93px;
-    font-family: Poppins;
+  background-color: #fac021; /* Yellow background */
+  border: none;
+  color: white;
+  padding: 4px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 0px;
+  width: 161.36px;
+  height: 93px;
+  font-family: Poppins;
 }
-button:hover {
-    background-color: #faa721dc; /* Darker background on hover*/
-    color: white; /* White text */
-}
-.topnav {
-   background-color:#fac021;
-   overflow: hidden;
-    z-index: 10000;
-    width: 100%;
-    height: auto;
-}
-.topnav a{
-    float: right;
-    color: white;
-    text-align: center;
-    padding: 0;
-    text-decoration: none;
-    font-size: 17px;
-    margin: 0; 
-    z-index: 10000;/* Some margin */
-}  
 
-.topnav a.logo{
-    float:left;
-    z-index: 10000:
+button:hover {
+  background-color: #faa721dc;
+  color: white;
 }
-.topnav a:hover {
-   background-color: #faa721dc;
-    color: white;
-    z-index: 10000;
+
+/* Top Navigation */
+.topnav {
+  background-color: #fac021;
+  overflow: hidden;
+  position: relative;
+  z-index: 10000; /* always on top */
+  height: 80px;   /* reserve space */
+  line-height: 80px;
 }
+
+.topnav a {
+  float: right;
+  color: white;
+  text-align: center;
+  padding: 0 14px;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0;
+}
+
+.topnav a.logo {
+  float: left;
+}
+
+.topnav a:hover,
 .topnav a.active {
- background-color: #faa721dc;
- color: white;
-     z-index: 10000;
+  background-color: #faa721dc;
+  color: white;
 }
+
+/* Flex Containers */
 .flex-container {
   display: flex;
   flex-direction: row;
   background-color: #fac021;
-z-index: 10000;
 }
+
 .flex-container-hero {
-    margin-top: 80px;
+  margin-top: 80px; /* keep it below nav */
   display: flex;
   flex-direction: row;
-  z-index: 0
-    width: 1920px;
-  height: 1080px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
 }
-.flex-item-left{
-  flex: 100%;
-}
+
+.flex-item-left,
 .flex-item-right {
   flex: 100%;
 }
-/* Responsive layout - makes a one column layout instead of a two-column layout */
+
+/* Responsive layout */
 @media (max-width: 800px) {
   .flex-container {
     flex-direction: column;
   }
-
 }
-img.logo{
+
+/* Logos */
+img.logo {
   width: 161.36px;
   height: 84px;
 }
 
-img.hero {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Hero Images */
+.hero-container {
+  position: relative;
+  margin-top: 80px; /* sits below nav */
   width: 100%;
-  height: auto; /* keep proportions */
-  z-index: 1;
-    transform: translateX(100%);
-will-change: transform,opacity;
-}
-}
-
-img.hero1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto; 
-  z-index: 2;
-    transform: translateX(100%);
-will-change: transform,opacity;
-}
-
-img.hero2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;   
-  z-index: 3;
-    transform: translateX(100%);
-will-change: transform,opacity;
-}
-
-img.hero3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-   width: 100%;
-  height: auto; 
-  z-index: 4;
-    transform: translateX(100%);
-will-change: transform,opacity;
-}
-
-img.hero4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-    width: 100%;
-  height: auto; 
-  z-index: 5;
-    transform: translateX(100%);
-will-change: transform,opacity;
-}
-
-img.hero5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-   width: 100%;
-  height: auto; 
-  z-index: 6;
-    transform: translateX(100%);
-will-change: transform,opacity;
-}
-
-img.hero6 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto; 
-  z-index: 7;
-    transform: translateX(100%);
-will-change: transform,opacity;
-}
-
-img.hero7 {
-  position: absolute;
-  top: 0;
-  left: 0;
-   width: 100%;
-  height: auto; 
-  z-index: 8;
-transform: translateX(100%);
-will-change: transform,opacity;
-}
-
-body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; }
-body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; }
-body.loaded .hero3 { animation: slideInFromRight 1s ease-out 2s forwards; }
-body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; }
-body.loaded .hero5 { animation: slideInFromRight 1s ease-out 3s forwards; }
-body.loaded .hero6 { animation: slideInFromRight 1s ease-out 3.5s forwards; }
-body.loaded .hero7 { animation: slideInFromRight 1s ease-out 4s forwards; }
-
-body{
-    background-color:purple;
-    color :white;
-    margin:0;
-    padding:0
-}
-.accordion {
-    background-color: #fac021;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-    border-radius: 0px; 
-}
-.active, .accordion:hover {
-    background-color: #f4aa33fc;
-}
-.panel {
-    padding: 0 18px;
-    background-color: #faa721dc;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
- /* Style the tab */
-.tab {
+  height: 700px; /* adjust to your hero height */
   overflow: hidden;
-  border: 1px solid #fac021;
-background-color: #fac021;
 }
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
+/* Base styles for all hero images */
+.hero,
+.hero1,
+.hero2,
+.hero3,
+.hero4,
+.hero5,
+.hero6,
+.hero7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateX(100%); /* off screen initially */
+  opacity: 0;
+  will-change: transform, opacity;
+  z-index: 1;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #f4aa33fc;
+/* Hero (static, always visible) */
+.hero {
+  transform: translateX(0);
+  opacity: 1;
 }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #f4aa33fc;
-}
+/* Animated heroes (trigger only when body.loaded is added) */
+body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; z-index: 2; }
+body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; z-index: 3; }
+body.loaded .hero3 { animation: slideInFromRight 1s ease-out 2s forwards; z-index: 4; }
+body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-index: 5; }
+body.loaded .hero5 { animation: slideInFromRight 1s ease-out 3s forwards; z-index: 6; }
+body.loaded .hero6 { animation: slideInFromRight 1s ease-out 3.5s forwards; z-index: 7; }
+body.loaded .hero7 { animation: slideInFromRight 1s ease-out 4s forwards; z-index: 8; }
 
-/* Style the tab content */
-.tabcontent {
-  background-color: #f4aa33fc;
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #fac021;
-  border-top: none;
-}   
-@font-face {
-    font-family: viktorScript;
-    src: url('FontsFree-Net-ViktorScript-Regular.ttf');
-}
-@font-face {
-    font-family: Poppins;
-    src: url('Poppins-Regular.ttf');
-}
-h1{
-    font-family: viktorScript;
-    font-size: 60px;
-}
-.intro{
-    font-family: viktorScript;
-    font-size: 80px;
-    text-align: center;
-}
-h2{
-    font-family: Poppins;
-    font-size: 30px;
-    font-style: bold;
-}
-p{
-    font-family: Poppins;
-    font-size: 20px;
-}
+/* Animation Keyframes */
 @keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
@@ -282,28 +142,105 @@ p{
   }
 }
 
+/* Body */
+body {
+  background-color: purple;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
 
+/* Accordion */
+.accordion {
+  background-color: #fac021;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 0px;
+}
 
+.accordion:hover,
+.active {
+  background-color: #f4aa33fc;
+}
 
+.panel {
+  padding: 0 18px;
+  background-color: #faa721dc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
 
+/* Tabs */
+.tab {
+  overflow: hidden;
+  border: 1px solid #fac021;
+  background-color: #fac021;
+}
 
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
 
+.tab button:hover {
+  background-color: #f4aa33fc;
+}
 
+.tab button.active {
+  background-color: #f4aa33fc;
+}
 
+.tabcontent {
+  background-color: #f4aa33fc;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #fac021;
+  border-top: none;
+}
 
+/* Fonts */
+@font-face {
+  font-family: viktorScript;
+  src: url('FontsFree-Net-ViktorScript-Regular.ttf');
+}
 
+@font-face {
+  font-family: Poppins;
+  src: url('Poppins-Regular.ttf');
+}
 
+/* Typography */
+h1 {
+  font-family: viktorScript;
+  font-size: 60px;
+}
 
+.intro {
+  font-family: viktorScript;
+  font-size: 80px;
+  text-align: center;
+}
 
+h2 {
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: bold;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+p {
+  font-family: Poppins;
+  font-size: 20px;
+}
