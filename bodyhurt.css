@@ -58,6 +58,8 @@ button:hover {
   display: flex;
   flex-direction: row;
   z-index: 0
+    width: 1920px;
+  height: 1080px;
 }
 .flex-item-left{
   flex: 100%;
@@ -275,6 +277,7 @@ p{
     opacity: 1;
   }
 }
+
 
 
 
