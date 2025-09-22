@@ -37,14 +37,17 @@ button:hover {
 
 .topnav a.logo{
     float:left;
+    z-index: 10000:
 }
 .topnav a:hover {
    background-color: #faa721dc;
-    color: white
+    color: white;
+    z-index: 10000;
 }
 .topnav a.active {
  background-color: #faa721dc;
  color: white;
+     z-index: 10000;
 }
 .flex-container {
   display: flex;
@@ -271,6 +274,7 @@ p{
     opacity: 1;
   }
 }
+
 
 
 
