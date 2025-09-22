@@ -55,6 +55,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   background-color: #fac021;
+z-index: 10000;
 }
 .flex-container-hero {
   display: flex;
@@ -279,6 +280,7 @@ p{
     opacity: 1;
   }
 }
+
 
 
 
