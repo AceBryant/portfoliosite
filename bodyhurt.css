@@ -31,7 +31,8 @@ button:hover {
     padding: 0;
     text-decoration: none;
     font-size: 17px;
-    margin: 0; /* Some margin */
+    margin: 0; 
+    z-index: 9999;/* Some margin */
 }  
 
 .topnav a.logo{
@@ -255,6 +256,7 @@ p{
     opacity: 1;
   }
 }
+
 
 
 
