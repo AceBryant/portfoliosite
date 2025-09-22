@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bodyhurt.css">
+    <title>My Body Hurts!</title>
+</head>
+<div class="topnav">
+<a class="logo" href="index.html"><button><img src="logo_gb.png" alt="homepage"></button></a>
+<a href="pleasebodyibegyou.html"><button >Please Body, I Beg You</button></a>
+<a href="bodystophurting.html"><button >Body Stop Hurting</button></a>
+<a href="whymybodyhurts.html"><button>Why My Body Hurts</button></a>
+</div>
+<body>
+<div>
+<h1>Please Body I Beg You...</h1>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Body')">Body</button>
+  <button class="tablinks" onclick="openCity(event, 'Head')">Head</button>
+  <button class="tablinks" onclick="openCity(event, 'Mind')">Mind</button>
+</div>
+<div id="Body" class="tabcontent">
+  <h3>Body</h3>
+  <p>My body do be hurting.</p>
+</div>
+
+<div id="Head" class="tabcontent">
+  <h3>Head</h3>
+  <p>My head do be hurting.</p>
+</div>
+
+<div id="Mind" class="tabcontent">
+  <h3>Mind</h3>
+  <p>My mind do be hurting.</p>
+</div>
+<h2 title="My body hurts all the time lol"> I'M DYING!</h2>
+<p>Nah, just kidding, not dying, but my body does hurt.</p>
+<p>It hurts so much, I'm literally devoting my entire practice site to 
+    it. It's kind of funny. I like watching VS code trying to generate 
+the text for me like it knows what I want to say before I do. No you don't, 
+silly VS Code. Only I know what I want to say, not you. </p>
+</div>
+<div>
+<h1> My Head Hurts</h1>
+<p title= "my head hurts all the time lol"> You know what else hurts all the time? My head. Yep, my good old noggin, 
+    the old noodle. It hurts a lot because I've been going through a lot of stress and I think its kinda silly that the brain responds to stress through
+    pain. Like it's telling itself "Hey, this is kinda stressful, you know what we should do? We should cause oursevles even further discomfort by causing oureselves pain!" 
+    Why does the brain do that?</p>
+</div>
+ </div>
+ <h1> Reasons I'm Tired of My Body Hurting</h1>
+ <button class="accordion"> Section 1 </button>
+ <div class="panel">
+   <p>Content for Section 1</p>
+ </div class="panel">
+ <button class="accordion"> Section 2 </button>
+ <div class="panel">
+   <p>Content for Section 2</p>
+ </div class="panel">
+ <button class="accordion"> Section 3 </button>
+ <div class="panel">
+   <p>Content for Section 3</p>
+ </div class="panel">
+ <script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</body>
+
+</html>
+
