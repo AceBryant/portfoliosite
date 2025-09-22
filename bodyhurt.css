@@ -90,8 +90,8 @@ img.hero {
   width: 100%;
   height: auto; /* keep proportions */
   z-index: 1;
-  opacity: 1;
-  transform: translateX(0%);
+    transform: translateX(100%);
+will-change: transform,opacity;
 }
 }
 
@@ -281,6 +281,7 @@ p{
     opacity: 1;
   }
 }
+
 
 
 
