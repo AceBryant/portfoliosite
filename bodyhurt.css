@@ -90,10 +90,7 @@ img.logo {
 .hero1,
 .hero2,
 .hero3,
-.hero4,
-.hero5,
-.hero6,
-.hero7 {
+.hero4, {
   position: absolute;
   top: 0;
   left: 0;
@@ -110,15 +107,22 @@ img.logo {
   transform: translateX(0);
   opacity: 1;
 }
+.signature path {
+  fill: none;
+  stroke: white;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
 
 /* Animated heroes (trigger only when body.loaded is added) */
 body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; z-index: 2; }
 body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; z-index: 3; }
 body.loaded .hero3 { animation: slideInFromRight 1s ease-out 2s forwards; z-index: 4; }
 body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-index: 5; }
-body.loaded .hero5 { animation: slideInFromRight 1s ease-out 3s forwards; z-index: 6; }
-body.loaded .hero6 { animation: slideInFromRight 1s ease-out 3.5s forwards; z-index: 7; }
-body.loaded .hero7 { animation: slideInFromRight 1s ease-out 4s forwards; z-index: 8; }
+body.loaded .signature path {animation: drawLine 4s ease forwards;}
+
 
 /* Animation Keyframes */
 @keyframes slideInFromRight {
@@ -131,6 +135,11 @@ body.loaded .hero7 { animation: slideInFromRight 1s ease-out 4s forwards; z-inde
     opacity: 1;
   }
 }
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+
 
 /* Body */
 body {
@@ -234,6 +243,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
