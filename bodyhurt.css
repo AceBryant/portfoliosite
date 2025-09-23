@@ -111,7 +111,7 @@ img.logo {
 
 /* SVG signature stroke/draw style */
 #Layer_5 path {
-  stroke: white;
+  stroke: black;
   fill: none;
   stroke-width: 2;
   z-index: 10;
@@ -347,6 +347,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
