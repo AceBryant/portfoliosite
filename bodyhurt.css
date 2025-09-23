@@ -75,17 +75,15 @@ img.logo {
   width: 161.36px;
   height: 84px;
 }
-
 /* Hero Images */
 .hero-container {
   position: relative;
-  margin-top: 0px; /* sits below nav */
+  margin-top: 0px;
   width: 100%;
-  height: 700px; /* adjust to your hero height */
+  height: 700px;
   overflow: hidden;
 }
 
-/* Base styles for all hero images */
 .hero,
 .hero1,
 .hero2,
@@ -96,51 +94,63 @@ img.logo {
   left: 0;
   width: 100%;
   height: auto;
-  transform: translateX(100%); /* off screen initially */
+  transform: translateX(100%);
   opacity: 0;
   will-change: transform, opacity;
   z-index: 1;
 }
 
-/* Hero (static, always visible) */
+/* Always-visible hero base */
 .hero {
   transform: translateX(0);
   opacity: 1;
+  z-index: 1;
 }
 
-/* SVG handwriting animation */
+/* Animated heroes */
+body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; z-index: 2; }
+body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; z-index: 3; }
+body.loaded .hero3 { animation: slideInFromRight 1s ease-out 2s forwards; z-index: 4; }
+body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-index: 5; }
+
+/* Handwriting SVG */
 #Layer_5 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 9999; /* above heroes */
+  z-index: 9999; /* always above heroes */
   pointer-events: none;
-  opacity: 1;
+  opacity: 0;
 }
 
 #Layer_5 path {
-  stroke: white;       /* handwriting color */
-  fill: transparent;   /* no fill until later */
+  stroke: white;
+  fill: transparent;
   stroke-width: 2;
-  stroke-dasharray: 1000;   
+  stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
+  opacity: 0;
 }
 
-/* Trigger animations after page load */
-body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; z-index: 2; }
-body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; z-index: 3; }
-body.loaded .hero3 { animation: slideInFromRight 1s ease-out 2s forwards; z-index: 4; }
-body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-index: 5; }
+/* Handwriting animation */
+body.loaded #Layer_5 {
+  opacity: 1;
+}
 
-/* Handwriting stroke animation */
 body.loaded #Layer_5 path {
+  opacity: 1;
   animation: drawLine 4s ease forwards,
-             fillIn 1s ease forwards 4s; /* run fill after stroke */
+             fillIn 1s ease forwards 4s; /* fill after stroke */
 }
 
-/* Keyframes */
+/* Animations */
+@keyframes slideInFromRight {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
 @keyframes drawLine {
   to { stroke-dashoffset: 0; }
 }
@@ -151,10 +161,11 @@ body.loaded #Layer_5 path {
     stroke: white;
   }
   100% {
-    fill: #272525;     /* your final fill color */
-    stroke: transparent; /* stroke disappears */
+    fill: #272525;
+    stroke: transparent;
   }
 }
+
 /* Body */
 body {
   background-color: purple;
@@ -257,5 +268,6 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
