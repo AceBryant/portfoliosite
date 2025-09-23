@@ -110,11 +110,14 @@ img.logo {
 
 
 /* SVG signature stroke/draw style */
-#Layer_5 path {
-  stroke: black;
-  fill: none;
-  stroke-width: 2;
+#Layer_5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
   z-index: 10;
+  pointer-events: none; /* so it doesn’t block clicks */
 }
 /* Animated heroes (trigger only when body.loaded is added) */
 body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; z-index: 2; }
@@ -126,6 +129,7 @@ body.loaded #Layer_5 path:nth-of-type(1) {
   stroke-dashoffset: 1129;
   animation: drawLine 2s ease forwards;
   animation-delay: 0s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(2) {
@@ -133,6 +137,7 @@ body.loaded #Layer_5 path:nth-of-type(2) {
   stroke-dashoffset: 503;
   animation: drawLine 2s ease forwards;
   animation-delay: 0.5s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(3) {
@@ -140,6 +145,7 @@ body.loaded #Layer_5 path:nth-of-type(3) {
   stroke-dashoffset: 540;
   animation: drawLine 2s ease forwards;
   animation-delay: 1s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(4) {
@@ -147,6 +153,7 @@ body.loaded #Layer_5 path:nth-of-type(4) {
   stroke-dashoffset: 425;
   animation: drawLine 2s ease forwards;
   animation-delay: 1.5s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(5) {
@@ -154,6 +161,7 @@ body.loaded #Layer_5 path:nth-of-type(5) {
   stroke-dashoffset: 454;
   animation: drawLine 2s ease forwards;
   animation-delay: 2s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(6) {
@@ -161,6 +169,7 @@ body.loaded #Layer_5 path:nth-of-type(6) {
   stroke-dashoffset: 576;
   animation: drawLine 2s ease forwards;
   animation-delay: 2.5s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(7) {
@@ -168,6 +177,7 @@ body.loaded #Layer_5 path:nth-of-type(7) {
   stroke-dashoffset: 746;
   animation: drawLine 2s ease forwards;
   animation-delay: 3s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(8) {
@@ -175,6 +185,7 @@ body.loaded #Layer_5 path:nth-of-type(8) {
   stroke-dashoffset: 574;
   animation: drawLine 2s ease forwards;
   animation-delay: 3.5s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(9) {
@@ -182,6 +193,7 @@ body.loaded #Layer_5 path:nth-of-type(9) {
   stroke-dashoffset: 490;
   animation: drawLine 2s ease forwards;
   animation-delay: 4s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(10) {
@@ -189,6 +201,7 @@ body.loaded #Layer_5 path:nth-of-type(10) {
   stroke-dashoffset: 1024;
   animation: drawLine 2s ease forwards;
   animation-delay: 4.5s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(11) {
@@ -196,6 +209,7 @@ body.loaded #Layer_5 path:nth-of-type(11) {
   stroke-dashoffset: 503;
   animation: drawLine 2s ease forwards;
   animation-delay: 5s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(12) {
@@ -203,6 +217,7 @@ body.loaded #Layer_5 path:nth-of-type(12) {
   stroke-dashoffset: 754;
   animation: drawLine 2s ease forwards;
   animation-delay: 5.5s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(13) {
@@ -210,6 +225,7 @@ body.loaded #Layer_5 path:nth-of-type(13) {
   stroke-dashoffset: 540;
   animation: drawLine 2s ease forwards;
   animation-delay: 6s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(14) {
@@ -217,6 +233,7 @@ body.loaded #Layer_5 path:nth-of-type(14) {
   stroke-dashoffset: 574;
   animation: drawLine 2s ease forwards;
   animation-delay: 6.5s;
+   z-index: 10;
 }
 
 body.loaded #Layer_5 path:nth-of-type(15) {
@@ -224,6 +241,7 @@ body.loaded #Layer_5 path:nth-of-type(15) {
   stroke-dashoffset: 290;
   animation: drawLine 2s ease forwards;
   animation-delay: 7s;
+   z-index: 10;
 }
 
 
@@ -347,6 +365,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
