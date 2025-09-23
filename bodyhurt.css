@@ -160,7 +160,7 @@ body.loaded #Layer_5 {
     stroke: white;
   }
   100% {
-    fill: #272525;  /* final fill color */
+    fill: #000000;  /* final fill color */
     stroke: transparent; /* stroke disappears */
   }
 }
@@ -267,3 +267,4 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
