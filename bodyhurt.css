@@ -113,17 +113,20 @@ body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; z-in
 body.loaded .hero3 { animation: slideInFromRight 1s ease-out 2s forwards; z-index: 4; }
 body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-index: 5; }
 
+
 /* Handwriting SVG */
 #Layer_5 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* perfectly center */
+  max-width: 80%;   /* keeps it responsive */
   height: auto;
-  z-index: 9999; /* always above heroes */
+  z-index: 9999;    /* always above heroes */
   pointer-events: none;
   opacity: 0;
 }
+
 
 #Layer_5 path {
   stroke: white;
@@ -268,6 +271,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
