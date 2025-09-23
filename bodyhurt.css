@@ -136,20 +136,11 @@ body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-in
 
 /* Handwriting stroke animation */
 body.loaded #Layer_5 path {
-  animation: drawLine 4s ease forwards;
+  animation: drawLine 4s ease forwards,
+             fillIn 1s ease forwards 4s; /* run fill after stroke */
 }
 
-/* Fill + remove stroke after handwriting */
-body.loaded #Layer_5 {
-  animation: fillIn 1s ease forwards 4s; /* starts after drawLine ends */
-}
-
-/* Animation Keyframes */
-@keyframes slideInFromRight {
-  0% { transform: translateX(100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-
+/* Keyframes */
 @keyframes drawLine {
   to { stroke-dashoffset: 0; }
 }
@@ -160,11 +151,10 @@ body.loaded #Layer_5 {
     stroke: white;
   }
   100% {
-    fill: #000000;  /* final fill color */
+    fill: #272525;     /* your final fill color */
     stroke: transparent; /* stroke disappears */
   }
 }
-
 /* Body */
 body {
   background-color: purple;
@@ -267,4 +257,5 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
