@@ -107,6 +107,14 @@ img.logo {
   transform: translateX(0);
   opacity: 1;
 }
+
+
+/* SVG signature stroke/draw style */
+#Layer_5 path {
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+}
 /* Animated heroes (trigger only when body.loaded is added) */
 body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; z-index: 2; }
 body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; z-index: 3; }
@@ -338,6 +346,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
