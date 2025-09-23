@@ -106,7 +106,6 @@ img.logo {
 .hero {
   transform: translateX(0);
   opacity: 1;
-  opacity: 0;
 }
 
 
@@ -119,7 +118,7 @@ img.logo {
   height: auto;
   z-index: 10;
   pointer-events: none;
-  /* so it doesn’t block clicks */
+    opacity: 0;
 }
 /* Animated heroes (trigger only when body.loaded is added) */
 body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; z-index: 2; }
@@ -381,6 +380,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
