@@ -134,7 +134,7 @@ body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-in
 }
 body.loaded #write-paths path {
   opacity: 1;
-  animation: drawLine 2s ease forwards, fadeStroke 1s ease forwards 2s;
+  animation: drawLine 2s ease forwards, fadeStroke 1s ease forwards 2s;  z-index: 20;
 }
 #Logo {
   opacity: 0;
@@ -142,6 +142,7 @@ body.loaded #write-paths path {
 body.loaded #Logo {
   animation: revealLogo 1s ease forwards 6s;
   opacity:1;
+   z-index: 21;
 }
 
 /* Animations */
@@ -265,6 +266,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
