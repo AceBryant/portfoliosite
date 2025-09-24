@@ -1,29 +1,25 @@
-// ================================
-// Run animations AFTER full page load
-// ================================
-window.addEventListener('load', function() {
-  // Add "loaded" to <body> so CSS animations trigger
-  document.body.classList.add('loaded');
-});
-
-// ================================
-// Accordion functionality
-// ================================
-var acc = document.getElementsByClassName("accordion");
-
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    // Toggle active class on clicked accordion button
-    this.classList.toggle("active");
-
-    // Get the next sibling (the panel content)
-    var panel = this.nextElementSibling;
-
-    // Expand/collapse panel
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null; // close
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px"; // open
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  // Animate heroes
+  const heroes = document.querySelectorAll(".hero");
+  heroes.forEach((hero, i) => {
+    hero.style.animation = `slideInFromRight 1s ease-out forwards`;
+    hero.style.animationDelay = `${i + 1}s`;
+    hero.style.zIndex = i + 2;
   });
-}
+
+  // Handwriting path
+  const stroke = document.querySelector("#handwriting");
+  const length = stroke.getTotalLength();
+
+  stroke.style.strokeDasharray = length;
+  stroke.style.strokeDashoffset = length;
+
+  const startDelay = heroes.length + 1; // start after hero slides
+
+  stroke.style.opacity = 1;
+  stroke.style.animation = `drawLine 4s ease forwards ${startDelay}s, hideStroke 1s ease forwards ${startDelay + 4}s`;
+
+  // Show filled logo after handwriting
+  const logo = document.querySelector("#Logo");
+  logo.style.animation = `revealFill 1s ease forwards ${startDelay + 4}s`;
+});
