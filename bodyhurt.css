@@ -126,18 +126,23 @@ body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-in
   width: 100%;
   height: auto;
 }
-#handwriting {
+#write-paths path {
   stroke: white;
   stroke-width: 2;
   fill: none;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
   opacity: 0;
+}
+body.loaded #write-paths path {
+  opacity: 1;
+  animation: drawLine 2s ease forwards, fadeStroke 1s ease forwards 2s;
 }
 #Logo {
   opacity: 0;
 }
-
+body.loaded #Logo {
+  animation: revealLogo 1s ease forwards 6s;
+  opacity:1;
+}
 
 /* Animations */
 @keyframes slideInFromRight {
@@ -260,6 +265,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
