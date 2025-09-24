@@ -102,48 +102,60 @@ img.logo {
 
 /* Always-visible hero base */
 .hero {
-  position: absolute;
   transform: translateX(0);
   opacity: 1;
   z-index: 1;
 }
 
 /* Animated heroes */
-body.loaded .hero1 { animation: slideInFromRight 1s ease-out 1s forwards; z-index: 2; }
-body.loaded .hero2 { animation: slideInFromRight 1s ease-out 1.5s forwards; z-index: 3; }
-body.loaded .hero3 { animation: slideInFromRight 1s ease-out 2s forwards; z-index: 4; }
-body.loaded .hero4 { animation: slideInFromRight 1s ease-out 2.5s forwards; z-index: 5; }
+body.loaded .hero1 { animation: slideInFromRight 0.5s ease-out 0.5s forwards; }
+body.loaded .hero2 { animation: slideInFromRight 0.5s ease-out 0.8s forwards; }
+body.loaded .hero3 { animation: slideInFromRight 0.5s ease-out 1.1s forwards; }
+body.loaded .hero4 { animation: slideInFromRight 0.5s ease-out 1.4s forwards; }
 
+
+/* Centered logo */
 .logo-container {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
-  max-width: 800px;
+  max-width: 1000px;
   height: auto;
   z-index: 20;
 }
+
 #logo-svg {
   width: 100%;
   height: auto;
+  display: block;
 }
-#write-paths path {
-  stroke: white;
+
+/* Handwriting path */
+#write-path path {
+  stroke: black;
   stroke-width: 2;
   fill: none;
   opacity: 0;
+  stroke-dasharray: 1000;  /* JS will update this */
+  stroke-dashoffset: 1000;
+  z-index: 20;
 }
-body.loaded #write-paths path {
-  opacity: 1;
-  animation: drawLine 2s ease forwards, fadeStroke 1s ease forwards 2s;  z-index: 20;
+
+body.loaded #write-path {
+  animation: drawLine 4s ease forwards 5.5s;
 }
-#Logo {
+
+/* Final logo fill */
+#logo {
   opacity: 0;
+  z-index: 21;
 }
-body.loaded #Logo {
-  animation: revealLogo 1s ease forwards 6s;
-  opacity:1;
-   z-index: 21;
+body.loaded #logo {
+  animation: revealFill 1s ease forwards 10s;
+  opacity: 1;
+  z-index: 21;
 }
 
 /* Animations */
@@ -160,8 +172,7 @@ body.loaded #Logo {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-
-@keyframes hideStroke {
+@keyframes fadeOutStroke {
   to { opacity: 0; }
 }
 
