@@ -102,6 +102,7 @@ img.logo {
 
 /* Always-visible hero base */
 .hero {
+  position: absolute;
   transform: translateX(0);
   opacity: 1;
   z-index: 1;
@@ -266,6 +267,7 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
+
 
 
 
