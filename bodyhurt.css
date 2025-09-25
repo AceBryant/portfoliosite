@@ -76,19 +76,15 @@ img.logo {
   height: 84px;
 }
 /* Hero Images */
-.hero-container { 
+.hero-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9; /* keeps proportions */
-  max-height: 60vh;     /* cap so it never overwhelms */
-   min-height: 400px;     /* not too small */
-  max-height: 700px; 
-  margin: 0 auto;
+  height: 70vh;           /* consistent height relative to screen */
+  min-height: 400px;      /* prevents too small */
+  max-height: 900px;      /* prevents too tall */
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
 .hero,
 .hero1,
 .hero2,
@@ -102,8 +98,8 @@ img.logo {
   object-fit: cover;
   transform: translateX(100%);
   opacity: 0;
-  will-change: transform, opacity;
   z-index: 1;
+  will-change: transform, opacity;
 }
 
 /* Always-visible hero base */
@@ -123,18 +119,22 @@ body.loaded .hero4 { animation: slideInFromRight 0.5s ease-out 1.4s forwards; }
 /* Centered logo */
 .logo-container {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(500px, 80vw, 1000px); /* bigger logo that scales with screen */
+  width: clamp(500px, 65vw, 1200px);  /* Responsive width */
   height: auto;
-  z-index: 20;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo-svg {
   width: 100%;
   height: auto;
-  display: flex;
+  display: block;
 }
 
 /* Handwriting path */
@@ -148,17 +148,24 @@ body.loaded .hero4 { animation: slideInFromRight 0.5s ease-out 1.4s forwards; }
   z-index: 20;
 }
 
-body.loaded #write-path {
-  animation: drawLine 10s ease forwards 5.5s;
+body.loaded #write-path path {
+  opacity: 1;
+  animation: drawLine 2s ease forwards;
 }
-
+#write-path {
+  opacity: 1;
+}
+body.loaded #write-path {
+  animation: fadeOutStroke 1s ease forwards 8s;
+  opacity: 0;
+}
 /* Final logo fill */
 #logo {
   opacity: 0;
   z-index: 21;
 }
 body.loaded #logo {
-  animation: revealFill 1s ease forwards 10s;
+  animation: revealFill 1s ease forwards 8s;
   opacity: 1;
   z-index: 21;
 }
@@ -173,13 +180,16 @@ body.loaded #logo {
   to { stroke-dashoffset: 0; }
 }
 
+@keyframes fadeOutStroke {
+  from {opacity: 1; } 
+  to   {opacity: 0; }
+}
+
 @keyframes revealFill {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@keyframes fadeOutStroke {
-  to { opacity: 0; }
-}
+
 
 /* Body */
 body {
@@ -283,12 +293,3 @@ p {
   font-family: Poppins;
   font-size: 20px;
 }
-
-
-
-
-
-
-
-
-
